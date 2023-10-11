@@ -14,9 +14,9 @@ module.exports = class {
   }
 
   async execute () {
-    const myself = await this.Jira.getMyself()
+    const myself = await this.Jira.getIssue()
 
-    console.log(`Logged in as: ${myself.name}`)
+    console.log(`Logged in as: ${myself.key}`)
 
     return this.config
   }
